@@ -14,41 +14,47 @@
         <!-- navigation  -->
         <ul class="nav_list">
           <li class="nav_item">
-            <!-- при переходе с главной станици необходимо добавить href="index.html" и удалить class="active" -->
-            <a class="active">Главная</a>
+            <a class="nav_link nav_link_current" href="index.html">Главная</a>
           </li>
           <li class="nav_item">
-            <a href="#">О седоне</a>
+            <a class="nav_link" href="#">О седоне</a>
           </li>
           <li class="nav_item">
-            <a href="catalog.html">Гостиницы</a>
+            <a class="nav_link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
       <!-- custom menu -->
       <ul class="custom_menu_list">
         <li class="custom_menu_item">
-          <a class="search_link" href="#">
+          <button class="search" type="button">
             <span class="visually_hidden">Поиск</span>
-          </a>
+          </button>
+          <form class="search_popup shadow" action="https://echo.htmlacademy.ru/" method="get">
+            <input type="search" name="site-search">
+            <button type="submit">
+              <span class="visually_hidden">Поиск</span>
+            </button>
+          </form>
         </li>
         <li class="custom_menu_item">
-          <a class="favorites_link" href="#">
+          <button class="favorites" type="button">
             <span class="visually_hidden">Избраное</span>
-          </a>
+          </button>
         </li>
         <li class="custom_menu_item">
-          <a class="button" href="#" type="button">Хочу сюда!</a>
+          <button class="button_modal" type="button">Хочу сюда!</button>
         </li>
       </ul>
+      <!-- всплывающее окошко favorites -->
+      <div class="favorites_popup shadow"></div>
     </header>
     <!-- main -->
     <main class="page">
-      <h1 class="visually_hidden">Страница города Седона.</h1>
       <!-- hero -->
       <section class="hero">
-        <img class="hero_img" src="" alt="Горные пейзажи Седоны.">
-        <img class="title_welcom" src="" alt="Добропожаловать в Седону!">
+        <h1 class="visually_hidden">Страница города Седона</h1>
+        <img class="title_welcom" src="" alt="Добропожаловать в Седону, потому что Гранд Каньон отстой!">
         <b>Седона — небольшой городок в Аризоне,заслуживающий большего!</b>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
@@ -62,7 +68,7 @@
             <p class="item_description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
           <li class="advantage_item">
-            <img src="" alt="Здания города Седона.">
+            <img src="" alt="Здания в архитектурном стиле прошлого века города Седона.">
           </li>
           <li class="advantage_item">
             <h3 class="item_title">Небольшая площадь</h3>
@@ -109,11 +115,8 @@
       <article class="search_hotel">
         <h2 class="search_hotel_title">Заинтересовались?</h2>
         <p class="search_hotel_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="button modal" type="button">Поиск гостиницы в седоне</button>
+        <button class="button_modal" type="button">Поиск гостиницы в седоне</button>
       </article>
-    </main>
-    <!-- footer -->
-    <footer class="page_footer">
       <!-- subscribe -->
       <article class="subscribe">
         <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
@@ -124,28 +127,33 @@
           <button type="submit">Подписаться</button>
         </form>
       </article>
-      <!-- footer content -->
-      <ul class="social_list">
-        <li class="social_item">
-          <a class="vkontakte_link" href="https://vk.com/htmlacademy">
-            <span class="visually_hidden">ВКонтакте</span>
-          </a>
-        </li>
-        <li class="social_item">
-          <a class="telegram_link" href="https://t.me/htmlacademy">
-            <span class="visually_hidden">Телеграм</span>
-          </a>
-        </li>
-        <li class="social_item">
-          <a class="youtube_link" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually_hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-      <a class="footer_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="footer_logo" href="https://htmlacademy.ru/">
-        <img src="" alt="HTML Academy.">
-      </a>
+    </main>
+    <!-- footer -->
+    <footer class="page_footer">
+      <section class="footer_contacts">
+        <h2 class="visually_hidden">Контакты</h2>
+        <ul class="social_list">
+          <li class="social_item">
+            <a class="vkontakte_link" href="https://vk.com/htmlacademy">
+              <span class="visually_hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social_item">
+            <a class="telegram_link" href="https://t.me/htmlacademy">
+              <span class="visually_hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="social_item">
+            <a class="youtube_link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually_hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="footer_logo" href="https://htmlacademy.ru/">
+          <img src="" lang="en" alt="HTML Academy.">
+        </a>
+      </section>
     </footer>
   </body>
 </html>
