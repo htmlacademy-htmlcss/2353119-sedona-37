@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы</title>
+    <link rel="preload" href="fonts/ptsans-400.woff2"
+      as="font" type="woff2">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <!-- header -->
@@ -27,19 +30,20 @@
       <!-- custom menu -->
       <ul class="custom_menu_list">
         <li class="custom_menu_item">
-          <button class="button_search" type="button">
+          <a class="menu_item_link search" href="#">
             <span class="visually_hidden">Поиск.</span>
-          </button>
+          </a>
         </li>
         <li class="custom_menu_item">
-          <button class="button_favorites" type="button">
+          <a class="menu_item_link favorites" href="#">
             <span class="visually_hidden">Избраное.</span>
-          </button>
+          </a>
         </li>
         <li class="custom_menu_item">
-          <button class="button_modal" type="button">Хочу сюда!</button>
+          <a class="menu_item_link link_button" href="#">Хочу сюда!</a>
         </li>
       </ul>
+
     </header>
     <!-- main -->
     <main class="page_inner">
@@ -53,7 +57,7 @@
             </a>
           </li>
           <li class="breadcrumbs_item">
-            <a class="breadcrumbs_link" href="catalog.html">Гостиницы</a>
+            <a class="breadcrumbs_link">Гостиницы</a>
           </li>
         </ol>
         <!-- filter -->
@@ -113,7 +117,7 @@
           <fieldset class="catalog_filter_group">
             <legend class="catalog_filter_title visually_hidden">Кнопки:</legend>
             <button class="form_button" type="submit">Применить</button>
-            <input class="form_button button_transparent" type="reset" value="Сбросить">
+            <input class="form_button button_reset" type="reset" value="Сбросить">
           </fieldset>
         </form>
       </header>
@@ -121,35 +125,39 @@
       <section class="catalog">
         <h2 class="visually_hidden">Каталог.</h2>
         <!-- sorting -->
-        <p class="filter_output">Найдено гостиниц:<span class="output_value">38</span></p>
+        <p class="filter_output">Найдено гостиниц:<span class="filter_output_value">38</span></p>
         <select class="select_control" aria-label="Сортировка.">
           <option value="priceMin">Сначала дешевые</option>
           <option value="priceMax">Сначала дорогие</option>
           <option value="popularTop">Сначала популярные</option>
           <option value="ratingTop">Сначала с высоким рейтингом</option>
         </select>
-        <ul class="select_card_view">
-          <li class="card_view_item">
-            <button class="card_view_button_grid card_current" type="button">
+        <ul class="select_view_list">
+          <li class="select_view_item">
+            <a class="select_view_link select_view_current" href="#">
               <span class="visually_hidden">Показать карточками.</span>
-            </button>
+            </a>
           </li>
-          <li class="card_view_item">
-            <button class="card_view_button_deploy" type="button">
+          <li class="select_view_item">
+            <a class="select_view_link" href="#">
               <span class="visually_hidden">Показать развернуто.</span>
-            </button>
+            </a>
           </li>
-          <li class="card_view_item">
-            <button class="card_view_button_list" type="button">
+          <li class="select_view_item">
+            <a class="select_view_link" href="#">
               <span class="visually_hidden">Показать списком.</span>
-            </button>
+            </a>
           </li>
         </ul>
         <!-- card list -->
         <ul class="card_list">
           <li class="card_item">
-            <img class="card_img" src="images/catalog/jpg/amara-resort-spa.jpg" width="300" height="212" alt="Вид на звездное небо сквозь горную арку.">
-            <h3 class="card_title">Amara Resort & Spa</h3>
+            <a class="card_item_link" href="#">
+              <img class="card_img" src="images/catalog/jpg/amara-resort-spa.jpg" width="300" height="212" alt="Вид на звездное небо сквозь горную арку.">
+            </a>
+            <a class="card_item_title_link" href="#">
+              <h3 class="card_title">Amara Resort & Spa</h3>
+            </a>
             <p class="card_description">
               <span class="card_type_housing">Гостиница</span>
               <span class="card_min_price">От 4000 ₽</span>
@@ -165,8 +173,12 @@
             </dl>
           </li>
           <li class="card_item">
-            <img class="card_img" src="images/catalog/jpg/villas-at-poco-diablo.jpg" width="300" height="212" alt="Горы во время радуги.">
-            <h3 class="card_title">Villas at Poco Diablo</h3>
+            <a class="card_item_link" href="#">
+              <img class="card_img" src="images/catalog/jpg/villas-at-poco-diablo.jpg" width="300" height="212" alt="Горы во время радуги.">
+            </a>
+            <a class="card_item_title_link" href="#">
+              <h3 class="card_title">Villas at Poco Diablo</h3>
+            </a>
             <p class="card_description">
               <span class="card_type_housing">Гостиница</span>
               <span class="card_min_price">От 5000 ₽</span>
@@ -182,8 +194,12 @@
             </dl>
           </li>
           <li class="card_item">
-            <img class="card_img" src="images/catalog/jpg/desert-quail-lnn.jpg" width="300" height="212" alt="У подножья гор.">
-            <h3 class="card_title">Desert Quail Inn</h3>
+            <a class="card_item_link" href="#">
+              <img class="card_img" src="images/catalog/jpg/desert-quail-lnn.jpg" width="300" height="212" alt="У подножья гор.">
+            </a>
+            <a class="card_item_title_link" href="#">
+              <h3 class="card_title">Desert Quail Inn</h3>
+            </a>
             <p class="card_description">
               <span class="card_type_housing">Гостиница</span>
               <span class="card_min_price">От 2500 ₽</span>
@@ -199,8 +215,12 @@
             </dl>
           </li>
           <li class="card_item">
-            <img class="card_img" src="images/catalog/jpg/greenTree-lnn.jpg" width="300" height="212" alt="Скалы на фоне звездного неба.">
-            <h3 class="card_title">GreenTree Inn</h3>
+            <a class="card_item_link" href="#">
+              <img class="card_img" src="images/catalog/jpg/greenTree-lnn.jpg" width="300" height="212" alt="Скалы на фоне звездного неба.">
+            </a>
+            <a class="card_item_title_link" href="#">
+              <h3 class="card_title">GreenTree Inn</h3>
+            </a>
             <p class="card_description">
               <span class="card_type_housing">Гостиница</span>
               <span class="card_min_price">От 1500 ₽</span>
@@ -219,8 +239,8 @@
         <!-- pagination -->
         <ul class="pagination">
           <!-- премещение visible будет зависить от pagination_item_current + 3 элемента перед и - 3 до, первый и последний всегда виден -->
-          <li class="pagination_item always_visible pagination_item_current">
-            <a class="pagination_link" href="#"><span class="visually_hidden">Страница:</span>1</a>
+          <li class="pagination_item always_visible">
+            <a class="pagination_link pagination_link_current" href="#"><span class="visually_hidden">Страница:</span>1</a>
           </li>
           <li class="pagination_item visible">
             <a class="pagination_link" href="#"><span class="visually_hidden">Страница:</span>2</a>
@@ -252,13 +272,13 @@
         </ul>
       </section>
       <!-- subscribe -->
-      <article class="inner_subscribe">
+      <article class="subscribe">
         <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
         <p class="subscribe_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually_hidden" for="subscribe_email">email</label>
           <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш e-mail" required>
-          <button type="submit">Подписаться</button>
+          <button class="button_subscribe" type="submit">Подписаться</button>
         </form>
       </article>
     </main>
