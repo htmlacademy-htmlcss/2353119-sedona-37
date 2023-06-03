@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format(".woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format(".woff2");
+  font-display: swap;
+}
+
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+.page_header {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+.menu_item_link {
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+.link_button {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+.hero {
+  background-image: url(../images/hero/jpg/hero_background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #465570;
+}
+
+.advantage_title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantage_description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+
+.advantage_item_title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantage_item:first-of-type .advantage_item_title,
+.advantage_item:last-of-type .advantage_item_title {
+  color: #FFFFFF;
+}
+
+.advantage_item_description {
+  text-align: center;
+}
+
+.advantage_item:first-child,
+.advantage_item:last-child {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.advantage_item:nth-child(4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+/*  */
+
+.services_item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services_title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services_description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.services_item_title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services_item_description {
+  text-align: center;
+}
+
+.search_hotel_title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.search_hotel_description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.button_modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.page_main .subscribe {
+  background-image: url(../images/background_subscribe.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #465570;
+  color: #FFFFFF;
+}
+
+.page_main .subscribe_title {
+  color: #FFFFFF;
+}
+
+.subscribe_title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+}
+
+.subscribe_description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.button_subscribe {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.footer_phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.inner_header {
+  background-image: url(../images/background_filter.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #465570;
+  color: #FFFFFF;
+}
+
+.inner_title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs_link {
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.catalog_filter {
+  line-height: 23px;
+}
+
+.catalog_filter_group {
+  border: none;
+}
+
+.catalog_filter_title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.form_button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border: none;
+  border-radius: 4px;
+}
+
+.button_reset {
+  background-color: transparent;
+}
+
+.filter_output {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.select_control {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.card_item_title_link {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.card_link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #756157;
+  border-radius: 4px;
+}
+
+.card_button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border: none;
+  border-radius: 4px;
+}
+
+.card_rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pagination_link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 4px;
+}
+
+.pagination_link_current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
