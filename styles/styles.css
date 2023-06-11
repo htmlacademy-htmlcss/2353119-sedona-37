@@ -123,7 +123,8 @@ body {
 }
 
 .advantage_container {
-  padding: 0 274px;
+  width: 651px;
+  margin: 0 auto;
 }
 
 .advantage_title {
