@@ -33,7 +33,6 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -46,6 +45,9 @@ body {
 }
 
 .page_container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
   background-color: #FFFFFF;
