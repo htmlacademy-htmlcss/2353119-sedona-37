@@ -328,6 +328,52 @@ body {
   margin: 0 auto;
 }
 
+.social_list {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vkontakte_link::before {
+  content: "";
+  display: flex;
+  place-content: center;
+  width: 24px;
+  height: 14px;
+  padding: 7px;
+  background-image: url("../images/icons/vkontakte.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.youtube_link::before {
+  content: "";
+  display: flex;
+  place-content: center;
+  width: 22px;
+  height: 17px;
+  padding: 7px;
+  background-image: url("../images/icons/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.telegram_link::before {
+  content: "";
+  display: flex;
+  place-content: center;
+  width: 18px;
+  height: 16px;
+  padding: 7px;
+  background-image: url("../images/icons/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 .footer_phone {
   font-size: 40px;
   line-height: 40px;
