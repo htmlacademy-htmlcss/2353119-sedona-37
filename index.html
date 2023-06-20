@@ -10,39 +10,39 @@
     <div class="page_container">
       <!-- header -->
       <header class="page_header">
+        <a class="logo">
+          <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
+        </a>
         <nav class="nav">
-          <a class="logo">
-            <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
-          </a>
           <!-- navigation  -->
           <ul class="nav_list">
             <li class="nav_item">
-              <a class="nav_link nav_link_current" href="index.html">Главная</a>
+              <a class="nav_link current" href="index.html">Главная</a>
             </li>
             <li class="nav_item">
-              <a class="nav_link" href="#">О седоне</a>
+              <a class="nav_link" href="#">О Седоне</a>
             </li>
             <li class="nav_item">
               <a class="nav_link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
+          <!-- custom menu -->
+          <ul class="nav_list custom_menu">
+            <li class="nav_item">
+              <a class="nav_link search" href="#">
+                <span class="visually_hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link favorites" href="#">
+                <span class="visually_hidden">Избраное</span>
+              </a>
+            </li>
+            <li class="nav_item">
+              <a class="nav_link button" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
         </nav>
-        <!-- custom menu -->
-        <ul class="custom_menu_list">
-          <li class="custom_menu_item">
-            <a class="menu_item_link search" href="#">
-              <span class="visually_hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="custom_menu_item">
-            <a class="menu_item_link favorites" href="#">
-              <span class="visually_hidden">Избраное</span>
-            </a>
-          </li>
-          <li class="custom_menu_item">
-            <a class="menu_item_link link_button" href="#">Хочу сюда!</a>
-          </li>
-        </ul>
       </header>
       <!-- main -->
       <main class="page_main main_container">
@@ -67,21 +67,21 @@
               <img class="advantage_item_img" src="images/advantages/jpg/photo-buildings.jpg" width="800" height="385" alt="Здания в архитектурном стиле прошлого века города Седона.">
             </li>
             <li class="advantage_item advantage_item_small">
-              <h3 class="advantage_item_title">Небольшая площадь</h3>
+              <h3 class="advantage_item_title">Небольшая<br>площадь</h3>
               <p class="advantage_item_description">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantage_item advantage_item_small">
-              <h3 class="advantage_item_title advantage_item_center">Красивая дорога</h3>
+              <h3 class="advantage_item_title advantage_item_center">Красивая<br>дорога</h3>
               <p class="advantage_item_description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantage_item advantage_item_small">
-              <h3 class="advantage_item_title">Мало туристов</h3>
+              <h3 class="advantage_item_title">Мало<br>туристов</h3>
               <p class="advantage_item_description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="advantage_item advantage_item_large">
               <img class="advantage_item_img" src="images/advantages/jpg/photo-devil-bridge.jpg" width="800" height="385" alt="Нерукотворный мост над пропастью из горной породы.">
               <div class="advantage_item_container">
-                <h3 class="advantage_item_title">Там есть мост дьявола</h3>
+                <h3 class="advantage_item_title">Там есть мост&nbsp;дьявола</h3>
                 <p class="advantage_item_description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -90,7 +90,7 @@
         <!-- services -->
         <section class="services">
           <div class="services_container">
-            <h2 class="services_title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+            <h2 class="services_title">Приезжайте в Седону отдохнуть в&nbsp;комфорте и уюте!</h2>
             <p class="services_description">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="services_list">
@@ -111,39 +111,39 @@
         <!-- search hotel -->
         <article class="search_hotel">
           <h2 class="search_hotel_title">Заинтересовались?</h2>
-          <p class="search_hotel_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="button_modal" type="button">Поиск гостиницы в седоне</button>
+          <p class="search_hotel_description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <button class="search_hotel_button button" type="button">Поиск гостиницы в седоне</button>
         </article>
         <!-- subscribe -->
         <article class="subscribe">
           <div class="subscribe_container">
             <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
-            <p class="subscribe_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="subscribe_description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
             <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually_hidden" for="subscribe_email">Почта</label>
-              <input type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш e-mail" required>
-              <button class="button_subscribe" type="submit">Подписаться</button>
+              <input class="subscribe_form_input" type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш e-mail" required>
+              <button class="subscribe_form_button button" type="submit">Подписаться</button>
             </form>
           </div>
         </article>
       </main>
       <!-- footer -->
       <footer class="page_footer">
-        <section class="footer_contacts">
+        <section class="footer_social">
           <h2 class="visually_hidden">Контакты</h2>
           <ul class="social_list">
             <li class="social_item">
-              <a class="vkontakte_link" href="https://vk.com/htmlacademy">
+              <a class="social_item_link link_vkontakte" href="https://vk.com/htmlacademy">
                 <span class="visually_hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="social_item">
-              <a class="telegram_link" href="https://t.me/htmlacademy">
+              <a class="social_item_link link_telegram" href="https://t.me/htmlacademy">
                 <span class="visually_hidden">Телеграм</span>
               </a>
             </li>
             <li class="social_item">
-              <a class="youtube_link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social_item_link link_youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually_hidden">Ютуб</span>
               </a>
             </li>
