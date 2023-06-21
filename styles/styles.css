@@ -127,7 +127,7 @@ body {
   max-width: 320px;
   min-width: 256px;
 }
-/* плохой вариант, 1 решение - вынести кнопку из списка*/
+
 .custom_menu .nav_item:last-child {
   margin-left: 13px;
 }
@@ -183,7 +183,6 @@ body {
   margin: 0 auto;
 }
 
-/* --------------------------------- advantage */
 .advantage_container {
   padding: 69px 274px;
   margin-bottom: 21px;
@@ -204,7 +203,7 @@ body {
   line-height: 26px;
   text-align: center;
 }
-/* ---------------------------------------------------- */
+
 .advantage_list {
   display: flex;
   justify-content: center;
