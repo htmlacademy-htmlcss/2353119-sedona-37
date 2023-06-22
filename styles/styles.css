@@ -77,6 +77,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page_header {
@@ -91,9 +92,23 @@ body {
 .logo {
   display: block;
   width: 140px;
-  height: 70px;
+  height: 140px;
   position: relative;
+  margin-top: -70px;
   margin-bottom: -6px;
+  transform: rotate(45deg);
+  border-radius: 20%;
+}
+
+.logo img {
+  max-width: none;
+  width: 140px;
+  height: 70px;
+  position: absolute;
+  bottom: 7%;
+  left: 18%;
+  transform: rotate(-45deg);
+  pointer-events: none;
 }
 
 .nav {
@@ -222,6 +237,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #82B3D3;
 }
 
 .advantage_item_container {
@@ -229,12 +245,12 @@ body {
   align-content: center;
   padding: 40px 85px;
   color: #FFFFFF;
-  background-color: #82B3D3;
   width: 400px;
 }
 
 .advantage_item_img {
   display: block;
+  align-self: flex-start;
 }
 
 .advantage_item_small {
@@ -472,6 +488,7 @@ body {
 }
 
 .footer_phone {
+  padding: 5px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -481,6 +498,7 @@ body {
 }
 
 .footer_logo img {
+  padding: 8px 0;
   vertical-align: middle;
 }
 
