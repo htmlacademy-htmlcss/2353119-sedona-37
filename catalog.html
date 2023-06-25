@@ -60,11 +60,12 @@
             </li>
           </ol>
           <!-- filter -->
-          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="post">
+            <h2 class="visually_hidden">Фильтр каталога</h2>
             <div class="filter_container">
-              <!-- form infrastructure -->
-              <fieldset class="catalog_filter_group">
-                <legend class="catalog_filter_title">Инфраструктура:</legend>
+              <!-- filter infrastructure -->
+              <div class="catalog_filter_group" role="group" aria-labelledby="filter_infrastructure">
+                <h3 class="catalog_filter_title" id="filter_infrastructure">Инфраструктура:</h3>
                 <ul class="catalog_filter_list">
                   <li class="catalog_filter_item">
                     <input type="checkbox" id="pool" name="pool" checked>
@@ -79,10 +80,10 @@
                     <label for="network">Wi-Fi</label>
                   </li>
                 </ul>
-              </fieldset>
-              <!-- form type housing-->
-              <fieldset class="catalog_filter_group">
-                <legend class="catalog_filter_title">Тип Жилья:</legend>
+              </div>
+              <!-- filter type housing-->
+              <div class="catalog_filter_group" role="group" aria-labelledby="filter_type_housing">
+                <h3 class="catalog_filter_title" id="filter_type_housing">Тип Жилья:</h3>
                 <ul class="catalog_filter_list">
                   <li class="catalog_filter_item">
                     <input type="radio" id="hotel" name="typeHousing" value="hotel" checked>
@@ -97,13 +98,12 @@
                     <label for="apartments">Апартаменты</label>
                   </li>
                 </ul>
-              </fieldset>
+              </div>
             </div>
             <div class="filter_container">
-              <!-- form price -->
-              <!-- пропускаем -->
-              <fieldset class="catalog_filter_group">
-                <legend class="catalog_filter_title">Стоимость, ₽:</legend>
+              <!-- filter price -->
+              <div class="catalog_filter_group filter_price" role="group" aria-labelledby="filter_price">
+                <h3 class="catalog_filter_title" id="filter_price">Стоимость, ₽:</h3>
                 <div class="range_price_container">
                   <label for="min-price">
                     <input type="number" id="min-price" name="min-price" min="0" max="12000" step="500" value="0" placeholder="от">
@@ -118,13 +118,13 @@
                   <input type="range" name="min-price" min="0" max="12000" step="500" value="0">
                   <input type="range" name="max-price" min="0" max="12000" step="500" value="9000">
                 </div>
-              </fieldset>
-              <!-- form button -->
-              <fieldset class="catalog_filter_group group_button">
-                <legend class="catalog_filter_title visually_hidden">Кнопки:</legend>
+              </div>
+              <!-- filter button -->
+              <div class="catalog_filter_group group_button" role="group" aria-labelledby="filter_button">
+                <h3 class="catalog_filter_title visually_hidden" id="filter_button">Кнопки:</h3>
                 <button class="filter_form_button submit button" type="submit">Применить</button>
                 <button class="filter_form_button reset button" type="reset">Сбросить</button>
-              </fieldset>
+              </div>
             </div>
           </form>
         </header>
@@ -133,116 +133,103 @@
           <h2 class="visually_hidden">Каталог</h2>
           <!-- sorting -->
           <div class="sorting_container">
-            <p class="filter_output">Найдено гостиниц: <span class="filter_output_value">38</span></p>
-            <div class="select_container">
-              <select class="select_control" aria-label="Сортировка">
-                <option value="priceMin">Сначала дешевые</option>
-                <option value="priceMax">Сначала дорогие</option>
-                <option value="popularTop">Сначала популярные</option>
-                <option value="ratingTop">Сначала с высоким рейтингом</option>
-              </select>
-              <ul class="select_view_list">
-                <li class="select_view_item">
-                  <a class="select_view_link current" href="#">
-                    <span class="visually_hidden">Показать карточками</span>
-                  </a>
-                </li>
-                <li class="select_view_item">
-                  <a class="select_view_link" href="#">
-                    <span class="visually_hidden">Показать развернуто</span>
-                  </a>
-                </li>
-                <li class="select_view_item">
-                  <a class="select_view_link" href="#">
-                    <span class="visually_hidden">Показать списком</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <p class="filter_total">Найдено гостиниц: <span class="filter_total_value">38</span></p>
+            <select class="select_mode" aria-label="Сортировка">
+              <option value="priceMin">Сначала дешевые</option>
+              <option value="priceMax">Сначала дорогие</option>
+              <option value="popularTop">Сначала популярные</option>
+              <option value="ratingTop">Сначала с высоким рейтингом </option>
+            </select>
+            <ul class="viewer_mode">
+              <li class="viewer_mode_item">
+                <a class="viewer_mode_link show_card current" href="#">
+                  <span class="visually_hidden">Показать карточками</span>
+                </a>
+              </li>
+              <li class="viewer_mode_item">
+                <a class="viewer_mode_link show_more" href="#">
+                  <span class="visually_hidden">Показать развернуто</span>
+                </a>
+              </li>
+              <li class="viewer_mode_item">
+                <a class="viewer_mode_link show_list" href="#">
+                  <span class="visually_hidden">Показать списком</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <!-- card list -->
           <ul class="card_list">
             <li class="card_item">
-              <a class="card_item_link" href="#">
+              <a class="card_img_link" href="#">
                 <img class="card_img" src="images/catalog/jpg/amara-resort-spa.jpg" width="300" height="212" alt="Вид на звездное небо сквозь горную арку.">
               </a>
-              <a class="card_item_title_link" href="#">
+              <a class="card_title_link" href="#">
                 <h3 class="card_title">Amara Resort & Spa</h3>
               </a>
-              <p class="card_description">
-                <span class="card_type_housing">Гостиница</span>
-                <span class="card_min_price">От 4000 ₽</span>
-              </p>
-              <a class="card_link button" href="#">подробнее</a>
+              <p class="card_description">Гостиница<span>От 4000 ₽</span></p>
+              <a class="card_more_link button" href="#">подробнее</a>
               <button class="card_button button" type="button">в избранное</button>
-              <p class="stars stars-4">
+              <!-- поправить -->
+              <p class="card_stars stars-4">
                 <span class="visually_hidden">4 звезды</span>
               </p>
               <dl class="card_rating">
-                <dt class="rating_title">Рейтинг: </dt>
+                <dt class="rating_title">Рейтинг:&nbsp;</dt>
                 <dd class="rating_value">8,5</dd>
               </dl>
             </li>
             <li class="card_item">
-              <a class="card_item_link" href="#">
+              <a class="card_img_link" href="#">
                 <img class="card_img" src="images/catalog/jpg/villas-at-poco-diablo.jpg" width="300" height="212" alt="Горы во время радуги.">
               </a>
-              <a class="card_item_title_link" href="#">
+              <a class="card_title_link" href="#">
                 <h3 class="card_title">Villas at Poco Diablo</h3>
               </a>
-              <p class="card_description">
-                <span class="card_type_housing">Гостиница</span>
-                <span class="card_min_price">От 5000 ₽</span>
-              </p>
-              <a class="card_link button" href="#">подробнее</a>
+              <p class="card_description">Гостиница<span>От 5000 ₽</span></p>
+              <a class="card_more_link button" href="#">подробнее</a>
               <button class="card_button button active" type="button">в избранном</button>
-              <p class="stars stars-4">
+              <p class="card_stars stars-4">
                 <span class="visually_hidden">4 звезды</span>
               </p>
               <dl class="card_rating">
-                <dt class="rating_title">Рейтинг: </dt>
+                <dt class="rating_title">Рейтинг:&nbsp;</dt>
                 <dd class="rating_value">9,2</dd>
               </dl>
             </li>
             <li class="card_item">
-              <a class="card_item_link" href="#">
+              <a class="card_img_link" href="#">
                 <img class="card_img" src="images/catalog/jpg/desert-quail-lnn.jpg" width="300" height="212" alt="У подножья гор.">
               </a>
-              <a class="card_item_title_link" href="#">
+              <a class="card_title_link" href="#">
                 <h3 class="card_title">Desert Quail Inn</h3>
               </a>
-              <p class="card_description">
-                <span class="card_type_housing">Гостиница</span>
-                <span class="card_min_price">От 2500 ₽</span>
-              </p>
-              <a class="card_link button" href="#">подробнее</a>
+              <p class="card_description">Гостиница<span>От 2500 ₽</span></p>
+              <a class="card_more_link button" href="#">подробнее</a>
               <button class="card_button button" type="button">в избранное</button>
-              <p class="stars stars-3">
+              <p class="card_stars stars-3">
                 <span class="visually_hidden">3 звезды</span>
               </p>
               <dl class="card_rating">
-                <dt class="rating_title">Рейтинг: </dt>
+                <dt class="rating_title">Рейтинг:&nbsp;</dt>
                 <dd class="rating_value">6,9</dd>
               </dl>
             </li>
             <li class="card_item">
-              <a class="card_item_link" href="#">
+              <a class="card_img_link" href="#">
                 <img class="card_img" src="images/catalog/jpg/greenTree-lnn.jpg" width="300" height="212" alt="Скалы на фоне звездного неба.">
               </a>
-              <a class="card_item_title_link" href="#">
+              <a class="card_title_link" href="#">
                 <h3 class="card_title">GreenTree Inn</h3>
               </a>
-              <p class="card_description">
-                <span class="card_type_housing">Гостиница</span>
-                <span class="card_min_price">От 1500 ₽</span>
-              </p>
-              <a class="card_link button" href="#">подробнее</a>
+              <p class="card_description">Гостиница<span>От 1500 ₽</span></p>
+              <a class="card_more_link button" href="#">подробнее</a>
               <button class="card_button button" type="button">в избранное</button>
               <p class="stars stars-2">
                 <span class="visually_hidden">2 звезды</span>
               </p>
               <dl class="card_rating">
-                <dt class="rating_title">Рейтинг: </dt>
+                <dt class="rating_title">Рейтинг:&nbsp;</dt>
                 <dd class="rating_value">5,0</dd>
               </dl>
             </li>
