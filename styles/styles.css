@@ -55,11 +55,13 @@ img {
 }
 
 html {
-  height: 100%;
+	display: grid;
+  min-block-size: 100%;
 }
 
 body {
-  height: 100%;
+	display: grid;
+  min-block-size: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -71,9 +73,9 @@ body {
 }
 
 .page_container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr;
+  min-block-size: 100%;
   width: 1200px;
   margin: 0 auto;
   background-color: #FFFFFF;
@@ -179,10 +181,6 @@ body {
   padding: 8px 34px;
   color: #FFFFFF;
   background-color: #756157;
-}
-
-.main_container {
-  flex-grow: 1;
 }
 
 .hero {
