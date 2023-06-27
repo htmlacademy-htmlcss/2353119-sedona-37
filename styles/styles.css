@@ -131,6 +131,14 @@ body {
   color: #000000;
 }
 
+.nav_item .current {
+  position: relative;
+  text-decoration: underline solid #756257;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+  text-underline-offset: 20px;
+}
+
 .custom_menu {
   justify-content: center;
   max-width: 320px;
@@ -713,7 +721,6 @@ body {
 
 .sorting_container {
   display: grid;
-  grid-template-areas: "filter_total select_mode viewer_mode";
   grid-template-columns: 1fr auto auto;
   gap: 20px 70px;
   align-items: center;
@@ -721,7 +728,6 @@ body {
 }
 
 .filter_total {
-  grid-area: filter_total;
   margin: 0;
   font-weight: 700;
   font-size: 30px;
@@ -731,7 +737,6 @@ body {
 }
 
 .select_mode {
-  grid-area: select_mode;
   max-width: min-content;
   padding: 12px 31px 12px 18px;
   font-family: inherit;
@@ -750,7 +755,6 @@ body {
 }
 
 .viewer_mode {
-  grid-area: viewer_mode;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -826,9 +830,9 @@ body {
     "card_more_link card_button"
     "card_stars card_rating";
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: min-content 1fr auto auto auto;
+  grid-template-rows: min-content auto 1fr auto auto;
   gap: 16px 20px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   min-width: 340px;
   padding: 19px;
@@ -886,7 +890,10 @@ body {
 
 .card_description {
   grid-area: card_description;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+  align-self: start;
   justify-content: space-between;
   margin: 0;
 }
