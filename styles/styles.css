@@ -714,7 +714,7 @@ body {
 .sorting_container {
   display: grid;
   grid-template-areas: "filter_total select_mode viewer_mode";
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto auto;
   gap: 20px 70px;
   align-items: center;
   margin-bottom: 40px;
@@ -732,7 +732,7 @@ body {
 
 .select_mode {
   grid-area: select_mode;
-  min-width: 292px;
+  max-width: min-content;
   padding: 12px 31px 12px 18px;
   font-family: inherit;
   font-size: 18px;
@@ -754,6 +754,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 216px;
   margin: 0;
   padding: 0;
   list-style: none;
