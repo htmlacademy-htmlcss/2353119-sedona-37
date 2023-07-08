@@ -170,12 +170,12 @@ body {
   text-decoration: none;
 }
 
-.custom_menu_link:not([type="button"]):hover {
+.custom_menu_link:not(.button):hover {
   transform: scale(1.2);
   transition: all 0.2s ease-out;
 }
 
-.custom_menu_link:not([type="button"]):active {
+.custom_menu_link:not(.button):active {
   transform: scale(1);
 }
 
@@ -217,9 +217,9 @@ body {
   position: absolute;
   top: calc(50% - 11px);
   left: calc(50% + 8px);
-  transform: translate(-50%, -50%); /*  отступы от центра иконки */
+  transform: translate(-50%, -50%);
   min-width: 20px;
-  max-width: 25px;
+  max-width: 25px; /* ограничен 999 */
   min-height: 20px;
   padding: 0 4px;
   font-size: 10px;
@@ -786,6 +786,7 @@ body {
   display: block;
   position: relative;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .filter_control_mark {
@@ -1511,11 +1512,19 @@ align-items: center;
 
 .input_data:hover {
   background-color: #E6E6E6;
+  background-image: url("../images/modal/svg/icon_calendar-hover-focus.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px;
 }
 
 .input_data:focus {
   outline: 3px solid #83B3D3;
   background: #E6E6E6;
+  background-image: url("../images/modal/svg/icon_calendar-hover-focus.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px;
 }
 
 /* input data description */
