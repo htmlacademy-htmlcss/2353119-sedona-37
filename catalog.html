@@ -10,7 +10,7 @@
   <body>
     <div class="page_container">
       <!-- header -->
-      <header class="page_header">
+      <header class="page_header" data-test="header">
         <div class="logo_container">
           <img class="logo_img" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона." usemap="#logo">
           <map name="logo">
@@ -52,7 +52,7 @@
         </nav>
       </header>
       <!-- main -->
-      <main class="page_inner">
+      <main class="page_inner" data-test="main">
         <!-- inner header -->
         <header class="inner_header">
           <h1 class="inner_header_title">Гостиницы Седоны</h1>
@@ -69,7 +69,7 @@
             </li>
           </ol>
           <!-- catalog filter -->
-          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
             <h2 class="visually_hidden">Фильтр каталога</h2>
             <div class="filter_container">
               <!-- filter infrastructure -->
@@ -166,7 +166,7 @@
           </form>
         </header>
         <!-- catalog -->
-        <section class="catalog">
+        <section class="catalog" data-test="catalog">
           <h2 class="visually_hidden">Каталог</h2>
           <!-- sorting -->
           <div class="sorting_container">
@@ -293,7 +293,7 @@
           </ul>
         </section>
         <!-- subscribe -->
-        <article class="subscribe">
+        <article class="subscribe" data-test="subscribe">
           <div class="subscribe_container">
             <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
             <p class="subscribe_description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
@@ -306,7 +306,7 @@
         </article>
       </main>
       <!-- footer -->
-      <footer class="page_footer">
+      <footer class="page_footer" data-test="footer">
         <section class="footer_section">
           <h2 class="visually_hidden">Контакты</h2>
           <ul class="social_list">

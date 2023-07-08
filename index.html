@@ -10,11 +10,11 @@
   <body>
     <div class="page_container">
       <!-- header -->
-      <header class="page_header">
+      <header class="page_header" data-test="header">
         <div class="logo_container">
           <img class="logo_img" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона." usemap="#logo">
           <map name="logo">
-            <area target="_self" alt="" title="" href="index.html" coords="0,0,70,70,140,0" shape="poly">
+            <area target="_self" alt="Ссылка на главную" href="index.html" coords="0,0,70,70,140,0" shape="poly">
           </map>
         </div>
         <nav class="nav">
@@ -52,14 +52,14 @@
         </nav>
       </header>
       <!-- main -->
-      <main class="page_main">
+      <main class="page_main" data-test="main">
         <!-- hero -->
-        <section class="hero">
+        <section class="hero" data-test="hero">
           <h1 class="visually_hidden">Добропожаловать в Седону, потому что Гранд Каньон отстой!</h1>
           <img class="hero_img" src="images/hero/svg/hero_welcome.svg" width="458" height="352" alt=""> <!-- alt - дублирует h1 -->
         </section>
         <!-- advantage -->
-        <section class="advantage">
+        <section class="advantage" data-test="advantages">
           <div class="advantage_header_container">
             <h2 class="advantage_title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="advantage_text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -95,7 +95,7 @@
           </ul>
         </section>
         <!-- services -->
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="services_header_container">
             <h2 class="services_title">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
             <p class="services_text">Опытный персонал и качественное обслуживание!</p>
@@ -117,13 +117,13 @@
           </ul>
         </section>
         <!-- search hotel -->
-        <article class="search_hotel">
+        <article class="search_hotel" data-test="search">
           <h2 class="search_hotel_title">Заинтересовались?</h2>
           <p class="search_hotel_description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="search_hotel_button button" type="button">Поиск гостиницы в седоне</button>
         </article>
         <!-- subscribe -->
-        <article class="subscribe">
+        <article class="subscribe" data-test="subscribe">
           <div class="subscribe_container">
             <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
             <p class="subscribe_description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
@@ -136,7 +136,7 @@
         </article>
       </main>
       <!-- footer -->
-      <footer class="page_footer">
+      <footer class="page_footer" data-test="footer">
         <section class="footer_section">
           <h2 class="visually_hidden">Контакты</h2>
           <ul class="social_list">
