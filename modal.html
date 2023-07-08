@@ -123,15 +123,13 @@
         </article>
         <!-- subscribe -->
         <article class="subscribe">
-          <div class="subscribe_container">
-            <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
-            <p class="subscribe_description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
-            <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually_hidden" for="subscribe_email">Почта</label>
-              <input class="subscribe_input" type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш e-mail" required>
-              <button class="subscribe_submit button" type="submit">Подписаться</button>
-            </form>
-          </div>
+          <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
+          <p class="subscribe_description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
+          <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually_hidden" for="subscribe_email">Почта</label>
+            <input class="subscribe_input" type="email" name="subscribe_email" id="subscribe_email" placeholder="Ваш e-mail" required>
+            <button class="subscribe_submit button" type="submit">Подписаться</button>
+          </form>
         </article>
       </main>
       <!-- footer -->
@@ -165,5 +163,70 @@
         </section>
       </footer>
     </div> <!-- page_container - end -->
+    <!-- modal -->
+    <div class="modal_container">
+      <div class="modal modal_hotel_search">
+        <section class="modal_content">
+          <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
+          <form class="hotel_search_form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="field_group data">
+              <span class="field_group_label">Дата заезда:</span>
+              <span class="wrapper_input_data">
+                <input class="input_data" type="text" name="arrivalDate" placeholder="Укажите дату" value="27 апреля 2020" required>
+                <span class="input_data_description warning">Мы не можем отправить вас в прошлое.</span>
+              </span>
+            </label>
+            <label class="field_group data">
+              <span class="field_group_label">Дата выезда:</span>
+              <span class="wrapper_input_data">
+                <input class="input_data" type="text" name="departureDate" placeholder="Укажите дату" value="1 сентября 2023" required>
+                <span class="input_data_description alert">На эти даты есть свободные номера. Пока есть.</span>
+              </span>
+            </label>
+            <div class="field_group adult">
+              <span class="field_group_label">Взрослые:</span>
+              <div class="wrapper_number_persons">
+                <button class="toggle_number_persons minus" type="button">
+                  <svg class="sign_icon" aria-hidden="true" focusable="false" width="20" height="20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z"/></svg>
+                  <span class="visually_hidden">Прибавить количество взрослых.</span>
+                </button>
+                <label class="visually_hidden" for="adultCount">Количество взрослых.</label>
+                <input class="number_persons_input" type="number" name="adultCount" id="adultCount" min="1" max="9" value="2" required>
+                <button class="toggle_number_persons plus" type="button">
+                  <svg class="sign_icon" aria-hidden="true" focusable="false" width="20" height="20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                  <span class="visually_hidden">Убавить количество взрослых.</span>
+                </button>
+              </div>
+            </div>
+            <div class="field_group children">
+              <span class="field_group_label">Дети:</span>
+              <span class="tooltip">
+                <button class="tooltip_toggle" type="button" aria-labelledby="tooltip_label">
+                  <svg class="tooltip_toggle_icon" aria-hidden="true" focusable="false" width="26" height="26" fill="currentColor" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/></svg>
+                </button>
+                <span class="tooltip_text" role="tooltip" id="tooltip_label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span> <!-- tooltip - end -->
+              <div class="wrapper_number_persons">
+                <button class="toggle_number_persons minus" type="button">
+                  <svg class="sign_icon" aria-hidden="true" focusable="false" width="20" height="20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v2h14V9H3Z"/></svg>
+                  <span class="visually_hidden">Прибавить количество детей.</span>
+                </button>
+                <label class="visually_hidden" for="childrenCount">Количество детей.</label>
+                <input class="number_persons_input" type="number" name="childrenCount" id="childrenCount" min="0" max="9" value="2">
+                <button class="toggle_number_persons plus" type="button">
+                  <svg class="sign_icon" aria-hidden="true" focusable="false" width="20" height="20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                  <span class="visually_hidden">Убавить количество детей.</span>
+                </button>
+              </div>
+            </div>
+            <button class="modal_submit button" type="submit">Найти</button>
+          </form>
+        </section>
+        <button class="modal_close_button">
+          <svg class="close_button_icon" aria-hidden="true" focusable="false" width="21" height="21" fill="none" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M17.49 4.783 16.198 3.49l-5.707 5.707-5.708-5.707L3.49 4.783l5.708 5.708-5.708 5.707 1.293 1.293 5.708-5.708 5.707 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z"/></svg>
+          <span class="visually_hidden">Закрыть</span>
+        </button>
+      </div>
+    </div>
   </body>
 </html>
