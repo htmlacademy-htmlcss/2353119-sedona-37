@@ -252,7 +252,7 @@ body {
 /* advantage - start */
 /* advantage header container */
 .advantage_header_container {
-  width: 652px;
+  width: 655px;
   margin: 0 auto;
   padding: 69px 0 90px 0;
 }
@@ -320,7 +320,7 @@ body {
   display: grid;
   align-content: center;
   width: 400px;
-  padding: 40px 85px;
+  padding: 40px 80px;
   color: #FFFFFF;
 }
 
@@ -342,7 +342,7 @@ body {
   display: grid;
   place-content: center;
   width: 400px;
-  padding: 40px 85px;
+  padding: 40px 80px;
 }
 
 .advantage_item.small:nth-child(odd) {
@@ -390,7 +390,7 @@ body {
   justify-items: center;
   row-gap: 30px;
   min-height: 385px;
-  padding: 40px 85px;
+  padding: 40px 80px;
 }
 
 .services_item:nth-child(odd) {
@@ -495,7 +495,12 @@ body {
 /* subscribe - start*/
 .subscribe {
   margin: 0 auto;
-  padding: 96px 258px 104px;
+}
+
+.subscribe_container {
+  width: 684px;
+  margin: 0 auto;
+  padding: 96px 0 104px;
 }
 
 .subscribe_title {
@@ -517,7 +522,7 @@ body {
 .subscribe_form {
   display: flex;
   justify-content: center;
-  min-width: 500px;
+  align-items: center;
 }
 
 .subscribe_input {
