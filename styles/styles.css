@@ -99,7 +99,6 @@ body {
   transition: all 0.2s ease-out;
 }
 
-
 .logo_img {
   display: block;
 }
@@ -840,6 +839,7 @@ body {
 }
 
 /* filter group - price */
+
 .price_container_input {
   display: grid;
   grid-template-columns: auto auto;
@@ -865,7 +865,7 @@ body {
 }
 
 .range_input {
-  min-width: 143px;
+  width: 143px;
   padding: 12px 42px 12px 20px;
   font-family: inherit;
   font-weight: 700;
@@ -874,6 +874,7 @@ body {
   color: #000000;
   background-color: #F2F2F2;
   border: none;
+  appearance: textfield;
 }
 
 .range_input::-webkit-outer-spin-button,
@@ -1006,7 +1007,6 @@ body {
 /* catalog filter - end */
 /* inner header - end */
 
-
 /* catalog - start */
 .catalog {
   padding: 50px 70px 60px;
@@ -1093,8 +1093,6 @@ body {
 .viewer_mode_link:active {
   border-color: #000000;
 }
-
-
 
 .viewer_mode_item .show_card::before {
   content: "";
@@ -1621,6 +1619,13 @@ align-items: center;
   line-height: 20px;
   text-align: center;
   z-index: 1;
+  appearance: textfield;
+}
+
+.number_persons_input::-webkit-outer-spin-button,
+.number_persons_input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .number_persons_input:hover {
@@ -1631,12 +1636,6 @@ align-items: center;
   outline: 3px solid #83B3D3;
   background: #E6E6E6;
   border-radius: 4px;
-}
-
-.number_persons_input::-webkit-outer-spin-button,
-.number_persons_input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }
 
 /* tooltip */
