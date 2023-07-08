@@ -27,8 +27,8 @@ img {
 }
 
 .visually_hidden {
-  position: fixed;
-  transform: scale(0);
+  position: fixed !important;
+  transform: scale(0) !important;
 }
 
 /* Button */
@@ -77,9 +77,9 @@ body {
 
 /* page header - start */
 .page_header {
+  z-index: 1;
   display: flex;
   column-gap: 44px;
-  z-index: 1;
   padding: 0 70px;
   font-weight: 700;
   font-size: 20px;
@@ -131,10 +131,10 @@ body {
 
 .nav_link:hover,
 .nav_link:active {
-  opacity: 0.6;
   text-decoration: underline 2px solid #756257;
   text-underline-position: under;
   text-underline-offset: 19px;
+  opacity: 0.6;
 }
 
 .nav_link.current {
@@ -162,8 +162,8 @@ body {
 }
 
 .custom_menu_link {
-  display: block;
   position: relative;
+  display: block;
   min-width: 20px;
   min-height: 20px;
   padding: 20px 0;
@@ -212,12 +212,11 @@ body {
 }
 
 .custom_menu_counter {
-  display: grid;
-  place-content: center;
   position: absolute;
   top: calc(50% - 11px);
   left: calc(50% + 8px);
-  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
   min-width: 20px;
   max-width: 25px; /* ограничен 999 */
   min-height: 20px;
@@ -227,6 +226,7 @@ body {
   color: #FFFFFF;
   background-color: #7DB54F;
   border-radius: 10px;
+  transform: translate(-50%, -50%);
 }
 /* nav - end */
 /* page header - end */
@@ -297,11 +297,11 @@ body {
 }
 
 .advantage_item_title::after {
-  content: "";
   display: block;
   width: 60px;
   margin: 30px auto 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.30);
+  content: "";
 }
 
 .advantage_item_text {
@@ -399,10 +399,10 @@ body {
 
 /* services icon */
 .services_item::before {
-  content: "";
   display: block;
   width: 75px;
   height: 72px;
+  content: "";
 }
 
 .services_item.housing_icon::before {
@@ -598,8 +598,8 @@ body {
 }
 
 .social_item_link {
-  display: block;
   position: relative;
+  display: block;
   min-width: 32px;
   min-height: 25px;
   padding: 4px;
@@ -646,8 +646,8 @@ body {
 
 /* footer logo */
 .footer_logo_link {
-  display: block;
   position: relative;
+  display: block;
   min-width: 115px;
   min-height: 33px;
   color: #000000;
@@ -676,7 +676,7 @@ body {
 .inner_header {
   padding: 35px 70px 70px;
   color: #FFFFFF;
-  background-image: url("../images/background_filter.jpg");
+  background-image: url("../images/catalog/jpg/background_filter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -707,7 +707,6 @@ body {
 
 /* добавляем arrow всем item кроме последнего */
 .breadcrumbs_item:not(:last-child)::after {
-  content: "";
   display: block;
   min-width: 8px;
   height: 20px;
@@ -716,11 +715,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  content: "";
 }
 
 .breadcrumbs_link {
-  display: block;
   position: relative;
+  display: block;
   min-width: 13px;
   min-height: 15px;
   font-size: 16px;
@@ -788,23 +788,23 @@ body {
 }
 
 .filter_control {
-  display: block;
   position: relative;
+  display: block;
   padding-left: 36px;
   cursor: pointer;
 }
 
 .filter_control_mark {
-  display: grid;
-  place-content: center;
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  display: grid;
+  place-content: center;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
   background-color: #FFFFFF;
+  border-radius: 4px;
+  transform: translateY(-50%);
 }
 
 .filter_control:hover {
@@ -821,7 +821,6 @@ body {
 }
 
 .filter_control_input[type="checkbox"]:checked + .filter_control_mark::after {
-  content: "";
   display: block;
   width: 20px;
   height: 20px;
@@ -829,6 +828,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  content: "";
 }
 
 .filter_control_input[type="radio"] + .filter_control_mark {
@@ -836,16 +836,15 @@ body {
 }
 
 .filter_control_input[type="radio"]:checked + .filter_control_mark::after {
-  content: "";
   display: block;
   width: 10px;
   height: 10px;
   background-color: #3F5E72;
   border-radius: 50%;
+  content: "";
 }
 
 /* filter group - price */
-
 .price_container_input {
   display: grid;
   grid-template-columns: auto auto;
@@ -865,9 +864,9 @@ body {
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%);
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
+  transform: translateY(-50%);
 }
 
 .range_input {
@@ -923,13 +922,13 @@ body {
 .range_toggle {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   padding: 0;
   background-color: #FFFFFF;
   border: none;
   border-radius: 5px;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
@@ -1047,11 +1046,11 @@ body {
   border: none;
   border-radius: 4px;
   /*  select arrow */
-  appearance: none;
   background-image: url("../images/catalog/svg/select_arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 12px auto;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -1101,7 +1100,6 @@ body {
 }
 
 .viewer_mode_item .show_card::before {
-  content: "";
   width: 16px;
   height: 14px;
   display: block;
@@ -1109,10 +1107,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  content: "";
 }
 
 .viewer_mode_item .show_more::before {
-  content: "";
   width: 16px;
   height: 14px;
   display: block;
@@ -1120,10 +1118,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  content: "";
 }
 
 .viewer_mode_item .show_list::before {
-  content: "";
   width: 16px;
   height: 14px;
   display: block;
@@ -1131,6 +1129,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  content: "";
 }
 /* sorting - end */
 
@@ -1258,8 +1257,8 @@ align-items: center;
 /* favorites button */
 .catalog_favorites_button {
   grid-area: catalog_favorites_button;
-  word-break: break-all;
   padding: 8px 18px;
+  word-break: break-all;
   background-color: #82B3D3;
 }
 
@@ -1323,13 +1322,13 @@ align-items: center;
 }
 
 .catalog_stars::before {
-  content: "";
   display: block;
   height: 17px;
   background-image: url("../images/catalog/svg/stars.svg");
   background-repeat: repeat-x;
   background-position: left;
   background-size: 24px 17px;
+  content: "";
 }
 
 /*  width stars img = 18px, + margin-right = 6px*/
@@ -1356,11 +1355,11 @@ align-items: center;
 
 /* top border pagination */
 .pagination_list::before {
-  content: "";
   display: block;
   width: 100%;
   margin-bottom: 32px;
   border-top: 1px solid #E6E6E6;
+  content: "";
 }
 
 /* pagination - start */
@@ -1429,11 +1428,11 @@ align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   display: flex;
   width: 100%;
   height: 100%;
   background-color:rgba(242, 242, 242, 0.80);
-  z-index: 2;
 }
 /* на modal_container - закрывашка */
 .modal_container_close {
@@ -1498,8 +1497,8 @@ align-items: center;
 
 /* input data */
 .wrapper_input_data {
-  align-self: flex-start;
   position: relative;
+  align-self: flex-start;
   max-width: 440px;
   min-width: min-content;
 }
@@ -1517,7 +1516,7 @@ align-items: center;
 
 .input_data:hover {
   background-color: #E6E6E6;
-  background-image: url("../images/modal/svg/icon_calendar-hover-focus.svg");
+  background-image: url("../images/modal/svg/icon_calendar_hover_focus.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px;
@@ -1526,7 +1525,7 @@ align-items: center;
 .input_data:focus {
   outline: 3px solid #83B3D3;
   background: #E6E6E6;
-  background-image: url("../images/modal/svg/icon_calendar-hover-focus.svg");
+  background-image: url("../images/modal/svg/icon_calendar_hover_focus.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px;
@@ -1534,16 +1533,16 @@ align-items: center;
 
 /* input data description */
 .input_data_description {
+  position: absolute;
+  bottom: 0;
   display: none;
   width: 100%;
   max-height: 50px;
   padding: 4px 20px;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+  transform: translateY(100%);
   overflow: auto;
 }
 
@@ -1620,19 +1619,19 @@ align-items: center;
   border-radius: 0 4px 4px 0;
 }
 
-/* number_persons */
+/* number persons */
 .wrapper_number_persons {
   display: flex;
 }
 
 .number_persons_input {
+  z-index: 1;
   display: block;
   width: 31px;
   height: 48px;
   padding: 14px 10px;
   line-height: 20px;
   text-align: center;
-  z-index: 1;
   appearance: textfield;
 }
 
@@ -1677,30 +1676,30 @@ align-items: center;
   position: absolute;
   top: calc(100% + 15px);
   left: 50%;
-  transform: translate(-50%);
+  display: none;
   width: 256px;
   padding: 22px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   color: #FFFFFF;
-  border-radius: 10px;
   background-color: #333333;
+  border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
-  display: none;
+  transform: translate(-50%);
 }
 
 .tooltip_text:after {
-  content:'';
-  background-image: url("../images/modal/svg/tooltip_arrow.svg");
-  width: 19px;
-  height: 9px;
   position:absolute;
   bottom: 100%;
   left: 0;
   right: 0;
+  width: 19px;
+  height: 9px;
   margin-left: auto;
   margin-right: auto;
+  background-image: url("../images/modal/svg/tooltip_arrow.svg");
+  content: "";
 }
 
 /* открывашка tooltip_text */
@@ -1731,12 +1730,12 @@ align-items: center;
 
 /* modal close button */
 .modal_close_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 64px;
   right: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 52px;
   height: 52px;
   padding: 0;
