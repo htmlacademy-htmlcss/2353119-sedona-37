@@ -27,8 +27,8 @@ img {
 }
 
 .visually_hidden {
-  position: fixed !important;
-  transform: scale(0) !important;
+  position: fixed;
+  transform: scale(0);
 }
 
 /* Button */
@@ -131,6 +131,7 @@ body {
 
 .nav_link:hover,
 .nav_link:active {
+  -webkit-text-decoration: underline 2px solid #756257;
   text-decoration: underline 2px solid #756257;
   text-underline-position: under;
   text-underline-offset: 19px;
@@ -138,6 +139,7 @@ body {
 }
 
 .nav_link.current {
+  -webkit-text-decoration: underline 2px solid #756257;
   text-decoration: underline 2px solid #756257;
   text-underline-position: under;
   text-underline-offset: 19px;
@@ -567,7 +569,7 @@ body {
 /* subscribe page main - background img */
 .page_main .subscribe {
   color: #ffffff;
-  background-image: url("../images/background_subscribe.jpg");
+  background-image: url("../images/subscribe/jpg/background_subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #465570;
@@ -888,6 +890,7 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   border: none;
+  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
@@ -901,6 +904,7 @@ body {
 
 .range_input::-webkit-outer-spin-button,
 .range_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -1069,6 +1073,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 12px auto;
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -1664,11 +1669,13 @@ body {
   padding: 14px 10px;
   line-height: 20px;
   text-align: center;
+  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
 .number_persons_input::-webkit-outer-spin-button,
 .number_persons_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
