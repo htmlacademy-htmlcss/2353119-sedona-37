@@ -131,7 +131,6 @@ body {
 
 .nav_link:hover,
 .nav_link:active {
-  -webkit-text-decoration: underline 2px solid #756257;
   text-decoration: underline 2px solid #756257;
   text-underline-position: under;
   text-underline-offset: 19px;
@@ -139,7 +138,6 @@ body {
 }
 
 .nav_link.current {
-  -webkit-text-decoration: underline 2px solid #756257;
   text-decoration: underline 2px solid #756257;
   text-underline-position: under;
   text-underline-offset: 19px;
