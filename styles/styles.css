@@ -1477,8 +1477,20 @@ body {
   display: none;
 }
 
+/* класс open для открытия модалки */
+.modal_container.open {
+  display: flex;
+}
+
+/* фолбэк */
+.modal_container:not(.open),
 .modal_container:target {
   display: flex;
+}
+
+/* вешаем на body при .modal_container.open или .modal_container:target */
+.scroll_lock {
+  overflow: hidden;
 }
 
 .modal {
@@ -1632,6 +1644,7 @@ body {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   white-space: normal;
   overflow: visible;
+  z-index: 3;
 }
 
 .input_data_description.alert:active {
@@ -1880,31 +1893,3 @@ body {
   fill-opacity: 0.1;
 }
 /* modal - end*/
-
-/* анимация указателя на открытие модалки */
-.finger {
-  position: relative;
-}
-
-.finger::after {
-  content: "👈";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) scale(2.5);
-  animation-name: left-right;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes left-right {
-  0% {
-    right: calc(0% - 60px);
-  }
-  50% {
-    right: calc(0% - 40px);
-  }
-  100% {
-    right: calc(0% - 60px);
-  }
-}
