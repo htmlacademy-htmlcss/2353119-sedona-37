@@ -490,6 +490,13 @@ body {
   background-color: #e5e5e5;
   cursor: default;
 }
+
+/* disabled link - ссылки с классом button без href */
+.search_hotel_button.button:not([href]) {
+  color: #ffffff;
+  background-color: #e5e5e5;
+  cursor: default;
+}
 /* search hotel - end*/
 
 /* subscribe - start*/
@@ -533,6 +540,16 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px 0 0 4px;
+}
+
+.subscribe_input:hover,
+.subscribe_input:active {
+  background-color: #E6E6E6;
+}
+
+.subscribe_input:focus {
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
 }
 
 .subscribe_input:disabled {
@@ -1452,14 +1469,14 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-}
-/* на modal_container - закрывашка */
-.modal_container_close {
   display: none;
+}
+
+.modal_container:target {
+  display: flex;
 }
 
 .modal {
@@ -1537,6 +1554,14 @@ body {
   border-radius: 4px;
 }
 
+.input_data::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .input_data:hover {
   background-color: #e6e6e6;
   background-image: url("../images/modal/svg/icon_calendar_hover_focus.svg");
@@ -1552,6 +1577,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .input_data:disabled {
@@ -1564,13 +1590,15 @@ body {
   bottom: 0;
   display: none;
   width: 100%;
-  max-height: 50px;
   padding: 4px 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   transform: translateY(100%);
-  overflow: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
 }
 
 .input_data_description.warning {
@@ -1580,6 +1608,38 @@ body {
 
 .input_data_description.alert {
   display: block;
+}
+
+/* переполнение */
+.input_data_description:active::after {
+  position: absolute;
+  bottom: 100%;
+  left: 15%;
+  width: 19px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/modal/svg/tooltip_arrow.svg");
+  content: "";
+}
+
+.input_data_description.warning:active {
+  transform: translateY(calc(100% + 10px));
+  border-radius: 10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  white-space: normal;
+  overflow: visible;
+}
+
+.input_data_description.alert:active {
+  transform: translateY(calc(100% + 10px));
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  white-space: normal;
+  overflow: visible;
 }
 
 /* field group adult */
@@ -1818,3 +1878,31 @@ body {
   fill-opacity: 0.1;
 }
 /* modal - end*/
+
+/* анимация указателя на открытие модалки */
+.finger {
+  position: relative;
+}
+
+.finger::after {
+  content: "👈";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(2.5);
+  animation-name: left-right;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left-right {
+  0% {
+    right: calc(0% - 60px);
+  }
+  50% {
+    right: calc(0% - 40px);
+  }
+  100% {
+    right: calc(0% - 60px);
+  }
+}
