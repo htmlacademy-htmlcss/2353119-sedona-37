@@ -342,9 +342,9 @@ body {
 /* small */
 .advantage_item.small {
   display: grid;
-  place-content: center;
+  place-content: start;
   width: 400px;
-  padding: 40px 80px;
+  padding: 112px 80px 40px 80px;
 }
 
 .advantage_item.small:nth-child(odd) {
@@ -388,11 +388,11 @@ body {
 
 .services_item {
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: center;
   row-gap: 30px;
   min-height: 385px;
-  padding: 40px 80px;
+  padding: 80px 80px 40px 80px;
 }
 
 .services_item:nth-child(odd) {
@@ -470,6 +470,7 @@ body {
 
 .search_hotel_button {
   display: block;
+  width: 376px;
   margin: 0 auto;
   padding: 8px 50px;
   font-size: 20px;
@@ -546,12 +547,12 @@ body {
 
 .subscribe_input:hover,
 .subscribe_input:active {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .subscribe_input:focus {
-  outline: 3px solid #83B3D3;
-  background-color: #E6E6E6;
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
 }
 
 .subscribe_input:disabled {
@@ -606,12 +607,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 30px;
 }
 
 /* social list */
 .social_list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
   gap: 8px 15px;
   max-width: 142px;
   margin: 0;
@@ -996,7 +999,7 @@ body {
 
 /* filter group - button */
 .button_container {
-  align-content: flex-end;
+  margin-top: 56px;
   row-gap: 32px;
 }
 
